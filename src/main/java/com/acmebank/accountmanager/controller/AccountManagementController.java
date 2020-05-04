@@ -5,7 +5,6 @@ import com.acmebank.accountmanager.model.Account;
 import com.acmebank.accountmanager.model.TransferFundsRequest;
 import com.acmebank.accountmanager.services.AccountManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,7 +28,6 @@ public class AccountManagementController {
 
     //PUT
     @RequestMapping(value = "/accounts/transferFunds", method = RequestMethod.PUT)
-    @ResponseStatus(value = HttpStatus.CREATED, reason = "Transfer Successful")
     public List<Account> transferFunds(@RequestBody TransferFundsRequest transferFundsRequest) throws AccountException {
         return accountManager.transferFunds(transferFundsRequest);
 
