@@ -1,0 +1,3 @@
+INSERT INTO ACCOUNTS (accountNumber, accountBalance)
+VALUES (12345678, 1000000),
+       (88888888, 1000000);
